@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Remington — Living Typewriter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg">
+    <div class="tw-wrap">
+      <div class="machine-top">
+        <div class="brand">Remington</div>
+        <div class="ribbon-indicator">
+          <div class="ribbon-spool" id="spool1"></div>
+          <div class="ribbon-line"></div>
+          <div class="ribbon-spool" id="spool2"></div>
+        </div>
+      </div>
+
+      <div class="platen-knobs">
+        <div class="knob" onclick="scrollPaper(-1)" title="Roll paper up"></div>
+        <div class="knob" onclick="scrollPaper(1)" title="Roll paper down"></div>
+      </div>
+
+      <div class="paper-housing">
+        <div class="paper-rollers">
+          <div class="roller"></div>
+          <div class="roller"></div>
+          <div class="roller"></div>
+          <div class="roller"></div>
+        </div>
+        <div class="paper-container" id="paperContainer">
+          <div class="typed-text" id="typedText"><span class="cursor-block"></span></div>
+          <div class="ding-flash" id="dingFlash">✦</div>
+        </div>
+        <div class="paper-tear"></div>
+        <div class="carriage-bar" id="carriageBar">
+          <div class="carriage-handle" id="carriageHandle" style="left: 10px;"></div>
+        </div>
+      </div>
+
+      <div class="keyboard-area">
+        <div class="key-row">
+          <div class="key" data-char="1">1</div>
+          <div class="key" data-char="2">2</div>
+          <div class="key" data-char="3">3</div>
+          <div class="key" data-char="4">4</div>
+          <div class="key" data-char="5">5</div>
+          <div class="key" data-char="6">6</div>
+          <div class="key" data-char="7">7</div>
+          <div class="key" data-char="8">8</div>
+          <div class="key" data-char="9">9</div>
+          <div class="key" data-char="0">0</div>
+          <div class="key wide" data-char="BACK">⌫</div>
+        </div>
+        <div class="key-row">
+          <div class="key" data-char="Q">Q</div>
+          <div class="key" data-char="W">W</div>
+          <div class="key" data-char="E">E</div>
+          <div class="key" data-char="R">R</div>
+          <div class="key" data-char="T">T</div>
+          <div class="key" data-char="Y">Y</div>
+          <div class="key" data-char="U">U</div>
+          <div class="key" data-char="I">I</div>
+          <div class="key" data-char="O">O</div>
+          <div class="key" data-char="P">P</div>
+        </div>
+        <div class="key-row">
+          <div class="key" data-char="A">A</div>
+          <div class="key" data-char="S">S</div>
+          <div class="key" data-char="D">D</div>
+          <div class="key" data-char="F">F</div>
+          <div class="key" data-char="G">G</div>
+          <div class="key" data-char="H">H</div>
+          <div class="key" data-char="J">J</div>
+          <div class="key" data-char="K">K</div>
+          <div class="key" data-char="L">L</div>
+          <div class="key return-key" data-char="RETURN">RETURN</div>
+        </div>
+        <div class="key-row">
+          <div class="key" data-char="Z">Z</div>
+          <div class="key" data-char="X">X</div>
+          <div class="key" data-char="C">C</div>
+          <div class="key" data-char="V">V</div>
+          <div class="key" data-char="B">B</div>
+          <div class="key" data-char="N">N</div>
+          <div class="key" data-char="M">M</div>
+          <div class="key" data-char=",">,</div>
+          <div class="key" data-char=".">.</div>
+          <div class="key" data-char="?">?</div>
+        </div>
+        <div class="key-row">
+          <div class="key space-bar" data-char=" ">SPACE</div>
+        </div>
+      </div>
+
+      <div class="status-bar">
+        <div class="status-text" id="charCount">LINE 1 · COL 1</div>
+        <div class="status-text" id="wordCount">0 WORDS</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
