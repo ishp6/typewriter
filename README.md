@@ -1,3 +1,4 @@
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green)](https://typewriter-bay.vercel.app/)
 # 🖊️ Remington — Living Typewriter
 
 A vintage typewriter experience built with vanilla HTML, CSS, and JavaScript. Type on real round keys, hear mechanical clicks, watch the carriage move, and feel the bell ding at the end of every line.
